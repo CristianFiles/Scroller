@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Scroller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Inserisci il testo da visualizzare"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2" />
+
+            <Editor
+                x:Name="TextBox"
+                MaxLength="10000"
+                Style="{StaticResource CommonEditorStyle}"
+                Placeholder="Copia qui il tuo testo" 
+                AutoSize="TextChanges" />
+            <Button
+                Text="Fatto"
+                Clicked="OnDoneClick" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
